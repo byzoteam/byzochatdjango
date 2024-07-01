@@ -11,9 +11,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import Config, Csv
+from decouple import Config, Csv,RepositoryEnv
 
-config = Config()
+config = Config(RepositoryEnv('.env'))
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
